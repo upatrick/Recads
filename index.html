@@ -17,6 +17,26 @@
                     <button class="singnupBtn">Sign up</button>
                 </div>
             </div>
+            <div class="formBx">
+
+            </div>
         </div>
+
+        <script>
+            const singninBtn = document.querySelector('.singninBtn')
+            const singnupBtn = document.querySelector('.singnupBtn')
+            const formBx = document.querySelector('.formBx')
+            const body = document.querySelector('body')
+
+            singnupBtn.onclick = function(){
+                formBx.classList.add('active')
+                body.classList.add('active')
+            }
+
+            singninBtn.onclick = function(){
+                formBx.classList.remove('active')
+                body.classList.remove('active')
+            }
+        </script>
     </body>
 </html>
