@@ -78,6 +78,10 @@ body {
     padding: 12px;
     border-radius: 5px;
 }
+
+.task-item i:hover {
+    cursor: pointer;
+}
 /* Utilities */
 .error {
     border: 2px solid red !important;
@@ -85,4 +89,8 @@ body {
 
 .error::placeholder {
     color: red;
+}
+
+.completed {
+    text-decoration: line-through;
 }
