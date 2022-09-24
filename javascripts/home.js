@@ -5,6 +5,8 @@ const tasksContainer = document.querySelector(".tasks-container")
 
 const validateInput = () => inputElement.value.trim().length > 0
 
+const tarefas= JSON.parse(localStorage.getItem('tasks'))
+
 const handleAddTask = () => {
   const inputIsValid = validateInput()
 
@@ -36,6 +38,7 @@ const handleAddTask = () => {
   inputElement.value = ""
 
   updateLocalStorage()
+  SaveInLocalStorage()
 }
 
 const handleClick = (taskContent) => {
@@ -115,6 +118,8 @@ const refreshTasksUsingLocalStorage = () => {
     taskItemContainer.appendChild(deleteItem)
 
     tasksContainer.appendChild(taskItemContainer)
+
+    SaveInLocalStorage()
   }
 }
 
@@ -123,3 +128,7 @@ refreshTasksUsingLocalStorage()
 addTaskButton.addEventListener("click", () => handleAddTask())
 
 inputElement.addEventListener("change", () => handleInputChange())
+
+function SaveInLocalStorage() {
+  localStorage.setItem('task-key', JSON.stringify(tasksContainer))
+}

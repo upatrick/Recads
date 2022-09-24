@@ -22,10 +22,10 @@
                 <div class="form signinForm">
                     <form >
                         <h3>Sign in</h3>
-                        <input type="text" placeholder="Username">
-                        <input type="password" placeholder="Password">
-                        <input type="submit" value="Login">
-                        <a href="#" class="forgot">Forgot Passswod</a>
+                        <input type="text" placeholder="Username" id="email">
+                        <input type="password" placeholder="Password" id="password">
+                        <!-- <input onclick="logar()" type="submit" value="Login" class="btn button-login"> -->
+                        <button id="login" class="btn">Login</button>
                     </form>
                 </div>
 
@@ -33,14 +33,16 @@
                     <form >
                         <h3>Sign in</h3>
                         <input type="text" placeholder="Username">
-                        <input type="text" placeholder="Email Address">
-                        <input type="password" placeholder="Password">
+                        <input id="email-creat" type="text" placeholder="Email Address">
+                        <input id="password-create" type="password" placeholder="Password">
                         <input type="password" placeholder="Confirm Password">
-                        <input type="submit" value="Register">
+                        <!-- <input type="submit" value="Register"> -->
+                        <button id="login" class="btn2">Rgister</button>
                     </form>
                 </div>
             </div>
         </div>
+        <script src="/login.js"></script>
         <script src="/javascripts/index.js"></script>
     </body>
 </html>
